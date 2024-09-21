@@ -4,8 +4,8 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
 
-        features = "/Users/apple/IdeaProjects/CucumberDemo/src/test/java/Features",
-        glue = "/Users/apple/IdeaProjects/CucumberDemo/src/test/java/steps",
+        features = "Features",
+        glue = "steps",
         monochrome = true,
         plugin = { "pretty", "html:target/cucumber-reports.html" }
 )
