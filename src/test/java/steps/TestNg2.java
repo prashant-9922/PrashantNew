@@ -17,11 +17,11 @@ import java.io.File;
 
 public class TestNg2 {
 
-    @Test(priority = -1, timeOut = 1)
-    public static void bTest() throws InterruptedException {
-        Thread.sleep(5);
+    @Test(timeOut = 5000) // 5 seconds
+    public void bTest() {
         System.out.println("b test executed");
     }
+
 
 
 
