@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
 
-        features = "Features",
+        features = "src/test/resources/Features",
         glue = "steps",
         monochrome = true,
         plugin = { "pretty", "html:target/cucumber-reports.html" }
