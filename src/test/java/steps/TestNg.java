@@ -1,7 +1,8 @@
 package steps;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.BankAccount;
+import page.InsufficientBalanceException;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -32,6 +33,13 @@ public class TestNg {
     public void dbConnection() throws SQLException {
         DriverManager.getConnection("");
     }
+
+    @Test
+    public void testWithdrawThrowsException() throws InsufficientBalanceException {
+        BankAccount account = new BankAccount(100); // Initial balance is 100
+        account.withdraw(200); // Trying to withdraw more than the balance
+    }
+
 
 
 
